@@ -1,0 +1,124 @@
+<template>
+  <section class="flex flex-col items-center px-5 pt-32 pb-32 max-md:py-20 max-sm:py-16">
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/16870e9cac58d52a8f7cb630c349d2c8c894f130?placeholderIfAbsent=true"
+      alt="alrimbot_charcoal 1"
+      class="w-[147px] h-[77px] mb-[25px] max-sm:w-[120px] max-sm:h-[63px] max-sm:mb-[20px]"
+    />
+    <h1 class="mb-20 text-lg font-bold leading-7 text-black max-sm:mb-12">
+      회원가입
+    </h1>
+    <form class="flex flex-col gap-7 w-full max-w-sm">
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">아이디</label>
+        <div class="flex gap-2.5">
+          <input
+            type="email"
+            placeholder="이메일 형식"
+            class="flex-1 px-3 py-4 h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+          />
+          <button
+            type="button"
+            class="h-12 text-sm text-white bg-orange-500 w-[92px] flex items-center justify-center"
+          >
+            중복확인
+          </button>
+        </div>
+        <p class="text-xs text-red-700">중복된 아이디 입니다.</p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">비밀번호</label>
+        <input
+          type="password"
+          placeholder="영문+숫자+특수문자 포함 최소 8자 이상"
+          class="px-3 py-4 w-full h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+        />
+        <p class="text-xs text-red-700">
+          영문+숫자+특수문자 포함 최소 8자 이상으로 설정해 주세요.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">비밀번호 확인</label>
+        <input
+          type="password"
+          placeholder="비밀번호를 입력해 주세요."
+          class="px-3 py-4 w-full h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+        />
+        <p class="text-xs text-red-700">비밀번호가 일치하지 않습니다.</p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">이름</label>
+        <input
+          type="text"
+          placeholder="실명을 입력해 주세요."
+          class="px-3 py-4 w-full h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">생년월일</label>
+        <div class="flex gap-2.5 max-sm:flex-col max-sm:gap-2">
+          <input
+            type="text"
+            placeholder="년(4자)"
+            class="px-3 py-4 h-12 text-sm bg-white border border-zinc-300 text-zinc-500 w-[121px] max-sm:w-full"
+          />
+          <div class="relative px-3 py-4 h-12 bg-white border border-zinc-300 w-[121px] max-sm:w-full">
+            <select class="text-sm text-black bg-transparent w-full h-full appearance-none">
+              <option>월</option>
+            </select>
+            <svg
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-[6px] h-[10px] transform-[rotate(-90deg)] absolute right-[11px] top-[19px] pointer-events-none"
+            >
+              <path d="M1 1L6 7L11 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            placeholder="일"
+            class="px-3 py-4 h-12 text-sm bg-white border border-zinc-300 text-zinc-500 w-[121px] max-sm:w-full"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">본인확인 이메일</label>
+        <input
+          type="email"
+          placeholder="이메일을 입력해 주세요."
+          class="px-3 py-4 w-full h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-sm text-black">휴대전화</label>
+        <input
+          type="tel"
+          placeholder="전화번호를 입력해 주세요."
+          class="px-3 py-4 w-full h-12 text-sm bg-white border border-zinc-300 text-zinc-500"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="mt-5 w-full h-12 text-sm text-white bg-orange-500 flex items-center justify-center"
+      >
+        가입하기
+      </button>
+    </form>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'SignupForm'
+}
+</script>

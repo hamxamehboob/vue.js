@@ -1,0 +1,52 @@
+<template>
+  <div class="mb-8 max-sm:mb-6">
+    <label
+      :for="fieldId"
+      class="block mb-3 text-sm font-bold leading-5 text-black"
+    >
+      {{ label }}
+    </label>
+    <input
+      v-if="type !== 'empty'"
+      :id="fieldId"
+      :type="type"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
+      class="px-2.5 pt-4 pb-4 w-full text-sm leading-5 text-black rounded-md border border-solid border-zinc-300"
+      :readonly="readonly"
+    />
+    <div
+      v-else
+      class="w-full rounded-md border border-solid border-zinc-300 h-[52px]"
+    ></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FormField',
+  props: {
+    label: {
+      type: String,
+      required: true
+    },
+    modelValue: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    fieldId: {
+      type: String,
+      required: true
+    }
+  },
+  emits: ['update:modelValue']
+}
+</script>

@@ -1,0 +1,36 @@
+<template>
+  <footer class="flex flex-col justify-center items-center px-5 w-full bg-neutral-700 h-[380px] max-md:px-10 max-sm:px-5">
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/0b499162b20374aeeda347b775cbada1a0185d39?placeholderIfAbsent=true"
+      alt="logo"
+      class="w-[118px] h-[64px] mb-[27px] max-sm:w-[100px] max-sm:h-[54px] max-sm:mb-[20px]"
+    />
+    <nav class="flex gap-5 mb-12 max-sm:flex-col max-sm:gap-4 max-sm:mb-8">
+      <a href="#" class="text-lg text-center text-white underline max-sm:text-base">
+        서비스 이용약관
+      </a>
+      <a href="#" class="text-lg text-center text-white underline max-sm:text-base">
+        개인정보처리방침
+      </a>
+    </nav>
+    <div class="flex flex-col gap-1.5 items-center max-sm:gap-2">
+      <p class="text-lg text-center text-white max-md:text-base max-sm:text-sm">
+        (주)알림봇 I 사업자 등록번호 : 742-81-01548 I 통신판매신고번호 :
+        2021-충부청주-1203 I 대표이사 : 김호천 I ceo@frients.co.kr
+      </p>
+      <p class="text-lg text-center text-white max-md:text-base max-sm:text-sm">
+        고객센터 : 02-2038-8990 I 주소 : 서울시 마포구 백범로31길 7,
+        공덕SK리더스뷰 2동 5층 514호
+      </p>
+      <p class="mt-8 text-lg text-center text-white max-md:text-base max-sm:mt-5 max-sm:text-sm">
+        Copyright (c) FrientsIO All rights reserved.
+      </p>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: 'AppFooter'
+}
+</script>

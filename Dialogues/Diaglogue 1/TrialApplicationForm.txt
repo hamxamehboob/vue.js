@@ -1,0 +1,85 @@
+<template>
+  <div class="flex justify-center items-center p-4 w-full bg-gray-100 min-h-screen">
+    <div class="relative bg-white rounded-lg shadow-lg max-w-[400px] w-[481px] max-md:w-[400px] max-sm:w-full">
+      <FormHeader @close="handleClose" />
+
+      <main class="p-7 max-sm:p-5">
+        <form @submit.prevent="handleSubmit">
+          <fieldset>
+            <legend class="sr-only">무료 체험 신청 정보</legend>
+
+            <FormField
+              label="이름"
+              v-model="formData.name"
+              field-id="name"
+              :readonly="true"
+            />
+
+            <FormField
+              label="전화번호"
+              v-model="formData.phone"
+              field-id="phone"
+              :readonly="true"
+            />
+
+            <FormField
+              label="이메일"
+              field-id="email"
+              type="empty"
+            />
+
+            <CheckboxField
+              label="마케팅 목적의 개인정보 수집에 동의합니다. *"
+              v-model="formData.marketingConsent"
+              field-id="marketing-consent"
+            />
+
+            <SubmitButton @submit="handleSubmit" />
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue'
+import FormHeader from './FormHeader.vue'
+import FormField from './FormField.vue'
+import CheckboxField from './CheckboxField.vue'
+import SubmitButton from './SubmitButton.vue'
+
+export default {
+  name: 'TrialApplicationForm',
+  components: {
+    FormHeader,
+    FormField,
+    CheckboxField,
+    SubmitButton
+  },
+  setup() {
+    const formData = ref({
+      name: '김호천',
+      phone: '010-1234-5678',
+      email: '',
+      marketingConsent: true
+    })
+
+    const handleClose = () => {
+      console.log('Form closed')
+      // Emit close event or handle modal closing logic
+    }
+
+    const handleSubmit = () => {
+      console.log('Form submitted:', formData.value)
+      // Handle form submission logic
+    }
+
+    return {
+      formData,
+      handleClose,
+      handleSubmit
+    }
+  }
+}
+</script>
